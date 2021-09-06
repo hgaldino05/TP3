@@ -10,7 +10,7 @@ public class Cliente extends Venda{
 		CPF = c;
 		telefone = t;
 		pontuacao = p;
-		nome = n;
+		nome =  n;
 	}
 	public String getNome() {
 		return nome;
