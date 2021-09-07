@@ -1,14 +1,12 @@
 package tp3;
 
-import java.util.Date;
-
 //Classe referente aos dados do colaborador
 public class Colaborador extends Pessoa{
 	
 	private String ID;
-	private Date dataEntrada;
+	private String dataEntrada;
 	
-	public Colaborador(String i, String n, Date d) {
+	public Colaborador(String i, String n, String d) {
 		ID = i;
 		nome = n;
 		dataEntrada = d;
@@ -25,10 +23,10 @@ public class Colaborador extends Pessoa{
 	public void setID(String iD) {
 		ID = iD;
 	}
-	public Date getDataEntrada() {
+	public String getDataEntrada() {
 		return dataEntrada;
 	}
-	public void setDataEntrada(Date dataEntrada) {
+	public void setDataEntrada(String dataEntrada) {
 		this.dataEntrada = dataEntrada;
 	}
 	

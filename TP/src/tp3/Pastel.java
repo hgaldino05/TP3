@@ -8,6 +8,9 @@ public class Pastel {
 	private double preco;
 	private int quantidade;
 	
+	public Pastel(String s, String t, double d, int i) {
+		// TODO Auto-generated constructor stub
+	}
 	public String getSabor() {
 		return sabor;
 	}

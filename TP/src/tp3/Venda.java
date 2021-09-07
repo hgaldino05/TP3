@@ -8,6 +8,13 @@ public class Venda {
 	private String pedido;
 	private String formaDePagamento;
 	
+	public Venda(Cardapio c, String f, double v[]) {
+		for(int i = 0; i < 99; i++) {
+		valor = v[i];
+		}
+		pedido = c.toString();
+		formaDePagamento = f;
+	}
 	public Double getValor() {
 		return valor;
 	}

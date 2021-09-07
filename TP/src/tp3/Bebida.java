@@ -7,6 +7,9 @@ public class Bebida {
 	private double preco;
 	private int quantidade;
 	
+	public Bebida(String n, String t, double d, int i) {
+		// TODO Auto-generated constructor stub
+	}
 	public String getNome() {
 		return nome;
 	}
