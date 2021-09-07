@@ -4,28 +4,21 @@ package tp3;
 //Classe referente as vendas que serão cadastradas no sistema
 public class Venda {
 
-	private Colaborador colaborador;
-	private Cardapio produtoVendido;
-	private Cliente cliente;
+	private Double valor;
+	private String pedido;
 	private String formaDePagamento;
-	protected String nome;
-	public Colaborador getColaborador() {
-		return colaborador;
+	
+	public Double getValor() {
+		return valor;
 	}
-	public void setColaborador(Colaborador colaborador) {
-		this.colaborador = colaborador;
+	public void setValor(Double valor) {
+		this.valor = valor;
 	}
-	public Cardapio getProdutoVendido() {
-		return produtoVendido;
+	public String getPedido() {
+		return pedido;
 	}
-	public void setProdutoVendido(Cardapio produtoVendido) {
-		this.produtoVendido = produtoVendido;
-	}
-	public Cliente getCliente() {
-		return cliente;
-	}
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
+	public void setPedido(String pedido) {
+		this.pedido = pedido;
 	}
 	public String getFormaDePagamento() {
 		return formaDePagamento;
@@ -33,5 +26,7 @@ public class Venda {
 	public void setFormaDePagamento(String formaDePagamento) {
 		this.formaDePagamento = formaDePagamento;
 	}
+	
+
 	
 }

@@ -3,8 +3,7 @@ package tp3;
 /*Classe referente aos dados do Cliente
  * Testando Commit com token
  */
-public class Cliente extends Venda{
-	private String CPF;
+public class Cliente extends Pessoa{
 	private String telefone;
 	private int pontuacao;
 	

@@ -3,7 +3,7 @@ package tp3;
 //Classe referente aos dados das bebidas presentes no cardápio
 public class Bebida {
 	private String nome;
-	private String tipo;
+	private String tamanho;
 	private double preco;
 	private int quantidade;
 	
@@ -13,11 +13,11 @@ public class Bebida {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getTipo() {
-		return tipo;
+	public String getTamanho() {
+		return tamanho;
 	}
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setTamanho(String tamanho) {
+		this.tamanho = tamanho;
 	}
 	public double getPreco() {
 		return preco;

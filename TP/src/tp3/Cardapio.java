@@ -2,14 +2,13 @@ package tp3;
 
 //Classe referente ao cardápio
 public class Cardapio {
+	
 	private String produtos[];
 	private String combos[];
 	private String descricaoProdutos[];
 	private String descricaoCombos[];
 	private double precoProdutos[];
 	private double precoCombos[];
-	private Pastel pastel[];
-	private Bebida bebida[];
 	
 	public String[] getProdutos() {
 		return produtos;
@@ -46,17 +45,5 @@ public class Cardapio {
 	}
 	public void setPrecoCombos(double[] precoCombos) {
 		this.precoCombos = precoCombos;
-	}
-	public Pastel[] getPastel() {
-		return pastel;
-	}
-	public void setPastel(Pastel[] pastel) {
-		this.pastel = pastel;
-	}
-	public Bebida[] getBebida() {
-		return bebida;
-	}
-	public void setBebida(Bebida[] bebida) {
-		this.bebida = bebida;
 	}
 }

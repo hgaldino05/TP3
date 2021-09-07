@@ -1,9 +1,11 @@
 package tp3;
 
-//Classe referente ao relatório de venda
-public abstract class RelatorioVenda {
-	private Venda venda[];
+import java.util.Date;
 
+//Classe referente ao relatório de venda
+public class RelatorioVenda {
+	private Venda venda[];
+	private Date dataVenda[];
 	public Venda[] getVenda() {
 		return venda;
 	}
