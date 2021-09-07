@@ -1,5 +1,7 @@
 package tp3;
 
+
+//Classe referente as vendas que serão cadastradas no sistema
 public class Venda {
 
 	private Colaborador colaborador;

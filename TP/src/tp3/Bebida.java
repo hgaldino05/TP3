@@ -1,5 +1,6 @@
 package tp3;
 
+//Classe referente aos dados das bebidas presentes no cardápio
 public class Bebida {
 	private String nome;
 	private String tipo;

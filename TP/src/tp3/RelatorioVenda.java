@@ -1,5 +1,6 @@
 package tp3;
 
+//Classe referente ao relatório de venda
 public abstract class RelatorioVenda {
 	private Venda venda[];
 

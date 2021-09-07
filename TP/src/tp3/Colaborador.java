@@ -2,6 +2,7 @@ package tp3;
 
 import java.util.Date;
 
+//Classe referente aos dados do colaborador
 public class Colaborador extends Venda{
 	
 	private String ID;

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+//Classe "main"
 public class Programa {
 	
 	private boolean executar;

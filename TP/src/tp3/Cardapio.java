@@ -1,5 +1,6 @@
 package tp3;
 
+//Classe referente ao cardápio
 public class Cardapio {
 	private String produtos[];
 	private String combos[];

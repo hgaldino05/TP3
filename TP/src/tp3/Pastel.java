@@ -1,5 +1,7 @@
 package tp3;
 
+
+//Classe referente aos dados dos Pastéis presentes no cardápio
 public class Pastel {
 	private String sabor;
 	private String tipo;
