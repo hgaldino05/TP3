@@ -4,7 +4,6 @@ package tp3;
 //Classe referente aos dados dos Pastéis presentes no cardápio
 public class Pastel {
 	private String sabor;
-	private String tipo;
 	private double preco;
 	private int estoque;
 	
@@ -17,12 +16,7 @@ public class Pastel {
 	public void setSabor(String sabor) {
 		this.sabor = sabor;
 	}
-	public String getTipo() {
-		return tipo;
-	}
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
-	}
+	
 	public double getPreco() {
 		return preco;
 	}
