@@ -17,58 +17,18 @@ public class Programa {
 	private List<Colaborador> colaborador;
 	private List<RelatorioVenda> relatorioVenda; */
 	
-	static Bebida b;
-	static Pastel p;
-	static Cliente c1;
-	static Cliente c2;
-	static Colaborador co1;
-	static Colaborador co2;
-	static Cardapio c[];
-	static Venda v[];
-	static RelatorioVenda r[];
+	
 	
 	static String data[];
 
 	public static void main(String[] args) {
 		//new Programa();
 		
-		b = new Bebida("Coca-cola", "Latinha 350ml", 3.49, 2);
-		
-		
-		p = new Pastel("Carne com queijo", "Normal", 3.99, 2);
-		
-		c1 = new Cliente("123.456.789-10", "4002-8922", 200, "Fulano");
-		c2 = new Cliente("012.345.678-90", "4004-0440", 125, "Fausto Silva");
-		
-		co1 = new Colaborador("0123", "Cleiton Rasta","11/3/2018");
-		co2 = new Colaborador("0456", "Mariana Vargas","9/2/2017");
-		
-		c[0] = new Cardapio("Pastel médio","Pastel em dobro","Pastel médio com recheio a escolha","2 pastéis médios, recheio a escolha",3.99, 7.49);
-		c[1] = new Cardapio("Coca-cola","Pastel + Lata","Latinha 350ml","Pastel médio e latinha 350ml, recheio e bebida a escolha",3.49, 6.99);
-		
-		v[0] = new Venda(c[0],"Cartão de débito",c[0].getPrecoProdutos());
-		
-		data[0] = "7/9/2021";
-		
-		r[0] = new RelatorioVenda(v[0],data[0]);
-		
-		System.out.println(b.toString());
-		System.out.println(p.toString());
-		
-		System.out.println(c1.toString());
-		System.out.println(c2.toString());
-		
-		System.out.println(co1.toString());
-		System.out.println(co2.toString());
-		
-		System.out.println(c[0].toString());
-		System.out.println(c[1].toString());
-
-		System.out.println(v[0].toString());
-		System.out.println(r[0].toString());
 	}
 	
 	/*private Programa(){
+		
+		preCadastros();
 		
 		ler = new Scanner(System.in);
 		executar = true;
@@ -108,5 +68,48 @@ public class Programa {
 		System.out.println("7 - Sair");
 	}*/
 	
-	
+	//Dados pré-cadastrados
+	private void preCadastros(){
+		for(int i = 0; i < 10; i++) {
+			
+		Bebida b = new Bebida();
+		Pastel p = new Pastel();
+		Cliente cl = new Cliente();
+		Colaborador co = new Colaborador();
+		//Cardapio ca = new Cardapio();
+		Venda v = new Venda();
+		RelatorioVenda r = new RelatorioVenda();
+		
+			if(i == 0) {
+				b.setNome("Coca-cola Lata");
+				b.setTamanho("350ml");
+				b.setPreco(3.49);
+				b.setEstoque(200);
+				
+				p.setSabor("Queijo com carne");
+				p.setTipo("Pastel médio");
+				p.setPreco(3.99);
+				p.setEstoque(200);
+				
+				cl.setCPF("123.456.789-10");
+				cl.setNome("Yudi Playstation");
+				cl.setTelefone("4002-8922");
+				cl.setPontuacao(120);
+				
+				co.setNome("Cleiton Rasta");
+				co.setID("0011.2019");
+				co.setDataEntrada("15/12/2019");
+								
+				v.setPastelPedido(p.getTipo() + " Sabor:" + p.getSabor());
+				v.setFormaDePagamento("Cartão de débito");
+				v.setQtdPastel(2);
+				v.setQtdBebida(1);
+				v.setValor((b.getPreco() * v.getQtdBebida()) + (p.getPreco() * v.getQtdPastel()));
+				
+				r.setDataVenda("3/5/2021");
+				r.setVenda(v);
+			}
+			
+		}
+	}
 }

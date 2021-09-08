@@ -10,16 +10,9 @@ public class Cardapio {
 	private double precoProdutos[];
 	private double precoCombos[];
 
-public Cardapio( String p, String c,String dp,String dc,double pp,double pc) {
+public Cardapio() {
 	
-	for(int i = 0; i <= 99; i++) {
-	produtos[i] = p;
-	combos[i] = c;
-	descricaoProdutos[i] = dp;
-	descricaoCombos[i] = dc;
-	precoProdutos[i] = pp;
-	precoCombos[i] = pc;
-	}
+	
 }
 
 public String[] getProdutos() {

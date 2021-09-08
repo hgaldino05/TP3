@@ -7,11 +7,8 @@ public class Cliente extends Pessoa{
 	private String telefone;
 	private int pontuacao;
 	
-	public Cliente(String c, String t, int p, String n) {
-		CPF = c;
-		telefone = t;
-		pontuacao = p;
-		nome =  n;
+	public Cliente() {
+	
 	}
 	public String getNome() {
 		return nome;

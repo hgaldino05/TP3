@@ -5,15 +5,13 @@ package tp3;
 public class Venda {
 
 	private Double valor;
-	private String pedido;
+	private int qtdPastel;
+	private int qtdBebida;	
+	private String pastelPedido;
+	private String bebidaPedida;
 	private String formaDePagamento;
 	
-	public Venda(Cardapio c, String f, double v[]) {
-		for(int i = 0; i < 99; i++) {
-		valor = v[i];
-		}
-		pedido = c.toString();
-		formaDePagamento = f;
+	public Venda() {
 	}
 	public Double getValor() {
 		return valor;
@@ -21,17 +19,37 @@ public class Venda {
 	public void setValor(Double valor) {
 		this.valor = valor;
 	}
-	public String getPedido() {
-		return pedido;
+	public String getPastelPedido() {
+		return pastelPedido;
 	}
-	public void setPedido(String pedido) {
-		this.pedido = pedido;
+	public void setPastelPedido(String pastelPedido) {
+		this.pastelPedido = pastelPedido;
 	}
+	
+	public String getBebidaPedida() {
+		return bebidaPedida;
+	}
+	public void setBebidaPedida(String bebidaPedida) {
+		this.bebidaPedida = bebidaPedida;
+	}
+	
 	public String getFormaDePagamento() {
 		return formaDePagamento;
 	}
 	public void setFormaDePagamento(String formaDePagamento) {
 		this.formaDePagamento = formaDePagamento;
+	}
+	public int getQtdPastel() {
+		return qtdPastel;
+	}
+	public void setQtdPastel(int qtdPastel) {
+		this.qtdPastel = qtdPastel;
+	}
+	public int getQtdBebida() {
+		return qtdBebida;
+	}
+	public void setQtdBebida(int qtdBebida) {
+		this.qtdBebida = qtdBebida;
 	}
 	
 

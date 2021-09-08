@@ -6,9 +6,9 @@ public class Pastel {
 	private String sabor;
 	private String tipo;
 	private double preco;
-	private int quantidade;
+	private int estoque;
 	
-	public Pastel(String s, String t, double d, int i) {
+	public Pastel() {
 		// TODO Auto-generated constructor stub
 	}
 	public String getSabor() {
@@ -29,11 +29,11 @@ public class Pastel {
 	public void setPreco(double preco) {
 		this.preco = preco;
 	}
-	public int getQuantidade() {
-		return quantidade;
+	public int getEstoque() {
+		return estoque;
 	}
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
+	public void setEstoque(int estoque) {
+		this.estoque = estoque;
 	}
 	
 }

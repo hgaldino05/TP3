@@ -5,9 +5,9 @@ public class Bebida {
 	private String nome;
 	private String tamanho;
 	private double preco;
-	private int quantidade;
+	private int estoque;
 	
-	public Bebida(String n, String t, double d, int i) {
+	public Bebida() {
 		// TODO Auto-generated constructor stub
 	}
 	public String getNome() {
@@ -28,10 +28,10 @@ public class Bebida {
 	public void setPreco(double preco) {
 		this.preco = preco;
 	}
-	public int getQuantidade() {
-		return quantidade;
+	public int getEstoque() {
+		return estoque;
 	}
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
+	public void setEstoque(int estoque) {
+		this.estoque = estoque;
 	}
 }
