@@ -10,6 +10,8 @@ public class Venda {
 	private String pastelPedido;
 	private String bebidaPedida;
 	private String formaDePagamento;
+	private String cliente;
+	private String vendedor;
 	
 	public Venda() {
 	}
@@ -51,7 +53,17 @@ public class Venda {
 	public void setQtdBebida(int qtdBebida) {
 		this.qtdBebida = qtdBebida;
 	}
-	
-
+	public String getCliente() {
+		return cliente;
+	}
+	public void setCliente(String cliente) {
+		this.cliente = cliente;
+	}
+	public String getVendedor() {
+		return vendedor;
+	}
+	public void setVendedor(String vendedor) {
+		this.vendedor = vendedor;
+	}	
 	
 }

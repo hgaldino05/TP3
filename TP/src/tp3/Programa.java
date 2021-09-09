@@ -16,6 +16,7 @@ public class Programa {
 	private List<Cardapio> cardapio;
 	private List<Cliente> cliente;
 	private List<Colaborador> colaborador;
+	private List<Venda> venda;
 	private List<RelatorioVenda> relatorioVenda;
 	
 	
@@ -23,13 +24,12 @@ public class Programa {
 	static String data[];
 
 	public static void main(String[] args) {
-		//new Programa();
-		
+		new Programa();
 	}
 	
 	private Programa(){
 		
-		preCadastros();
+		
 		ler = new Scanner(System.in);
 		executar = true;
 		bebida = new ArrayList<Bebida>();
@@ -38,19 +38,29 @@ public class Programa {
 		cliente = new ArrayList<Cliente>();
 		colaborador = new ArrayList<Colaborador>();
 		relatorioVenda = new ArrayList<RelatorioVenda>();
-		
+		venda = new ArrayList<Venda>();
 		System.out.println("BEM-VINDO AO SISTEMA DA PASTELARIA! \n");
 		
 		while(executar) {
 			//opcoes();
-			
+			cardapioCadastrado();
+			preCadastros();
+			vendaCadastrada();
 			int opcao = ler.nextInt();
 			ler.nextLine();
 			
 			System.out.println(opcao);
 			if(opcao != 0) {
 				
+				exibir();
+				System.out.println("Deseja editar algum dado? (S/N)");
+				String edita = ler.nextLine();
 				
+				if(edita.equalsIgnoreCase("S")) {
+					editar();
+				}else if(edita.equalsIgnoreCase("N")) {
+					executar = false;
+				}
 				executar = false;
 			}
 		}
@@ -61,12 +71,9 @@ public class Programa {
 	
 	/*private void opcoes() {
 		System.out.println("O que deseja acessar?:");
-		System.out.println("1 - Colaboradores");
-		System.out.println("2 - Clientes");
-		System.out.println("3 - Produtos");
-		System.out.println("4 - Cardápio");
-		System.out.println("5 - Cadastrar venda");
-		System.out.println("6 - Relatório de vendas");
+		System.out.println("1 - Exibir dados cadastrados");
+		System.out.println("2 - Editar dados cadastrados");
+		System.out.println("3 - Cadastrar novos dados");
 		System.out.println("7 - Sair");
 	}*/
 	
@@ -182,7 +189,7 @@ public class Programa {
 				cl.setPontuacao(120);
 				
 				co.setNome("Cleiton Rasta");
-				co.setID("001.2019");
+				co.setID("0001.2019");
 				co.setDataEntrada("15/8/2019");
 								
 			}
@@ -220,7 +227,7 @@ public class Programa {
 				cl.setPontuacao(80);
 				
 				co.setNome("Patrick Vieira");
-				co.setID("003.2019");
+				co.setID("0003.2019");
 				co.setDataEntrada("16/8/2019");
 				
 			}
@@ -344,8 +351,8 @@ public class Programa {
 				b.setSabor("Caldo de Cana");
 				b.setEstoque(70);
 				
-				p.setSabor("Brócolis com queijo");
-				p.setEstoque(30);
+				p.setSabor("Coxinha");
+				p.setEstoque(200);
 				
 				cl.setCPF("000.000.110-11");
 				cl.setNome("Dwayne Johnson");
@@ -363,5 +370,125 @@ public class Programa {
 			cliente.add(cl);
 			colaborador.add(co);
 		}
+	}
+	
+	private void vendaCadastrada() {
+		for(int i = 0; i < 10; i++) {
+			Venda v = new Venda();
+			Cliente cl = cliente.get(i);
+			Colaborador co = colaborador.get(i);
+			Cardapio ca = cardapio.get(i);
+			
+		
+				
+					if(i == 0) {
+						v.setCliente(cl.getNome());
+						v.setVendedor(co.getID());
+						v.setValor(ca.getPrecoProdutos() *v.getQtdPastel());
+						v.setPastelPedido(ca.getProdutos());
+						v.setQtdPastel(2);
+						v.setFormaDePagamento("Pagamento via PIX");
+					}
+				
+				
+					if(i == 2) {
+						v.setCliente(cl.getNome());
+						v.setVendedor(co.getID());
+						v.setValor(ca.getPrecoProdutos() *v.getQtdPastel());
+						v.setPastelPedido(ca.getProdutos());
+						v.setQtdPastel(2);
+						v.setFormaDePagamento("Pagamento via PIX");
+					}
+				}
+			}
+
+	
+	private void relatorioCadastrado() {
+		for(int i = 0; i < 10; i++) {
+			RelatorioVenda r = new RelatorioVenda();
+			
+			if(i == 0) {
+				
+			}
+		}
+	}
+	
+	private void exibir() {
+		System.out.println("Bebidas cadastradas no sistema: ");
+			for(int i = 0; i < bebida.size(); i++) {
+				Bebida b = bebida.get(i);
+			
+				System.out.println("BEBIDA #" + (i+1) + ": " + b.getSabor());
+			
+				if(b.getSabor().contains("Suco")) {
+					System.out.println("Opções: Copo com 300ml" + b.getSabor());
+				}else if(b.getSabor().contains("Caldo")) {
+					System.out.println("Opções: Copo com 300ml");
+				}else {
+					System.out.println("Latinha 350ml; Garrafa 600ml");
+				}
+				
+				System.out.println("Quantidade em estoque: " + b.getEstoque() + "\n");
+			}
+			
+		System.out.println("Pastéis cadastradas no sistema: ");
+			for(int i = 0; i < pastel.size(); i++) {
+				Pastel p = pastel.get(i);
+			
+				System.out.println("PASTEL #" + (i+1) + ": " + p.getSabor());
+				System.out.println("Opções: Pastel Médio, Pastel Grande, Mini pastel, Coxinha, Mini Coxinha");
+				System.out.println("Quantidade em estoque: " + p.getEstoque() + "\n");
+			}
+		
+		System.out.println("Produtos cadastrados no sistema: ");
+			for(int i = 0; i < cardapio.size(); i++) {
+				Cardapio ca = cardapio.get(i);
+				
+				System.out.println("PRODUTO #" + (i+1) + ": " + ca.getProdutos());
+				System.out.println("Preço: " + ca.getPrecoProdutos() + "\n");
+			}
+			
+		System.out.println("Combos cadastrados no sistema: ");
+			for(int i = 0; i < cardapio.size(); i++) {
+				Cardapio ca = cardapio.get(i);
+				
+				System.out.println("COMBO #" + (i+1) + ": " + ca.getCombos());
+				System.out.println("Preço: " + ca.getPrecoProdutos() + "\n");
+			}
+		
+		System.out.println("Clientes cadastrados no sistema: ");
+		for(int i = 0; i < cliente.size(); i++) {
+			Cliente cl = cliente.get(i);
+			
+			System.out.println("Cliente #" + (i+1) + ": " + cl.getNome());
+			System.out.println("Pontos: " + cl.getPontuacao());
+			System.out.println("CPF: " + cl.getCPF() + "\n");
+		}
+		
+		System.out.println("Colaboradores cadastrados no sistema: ");
+		for(int i = 0; i < colaborador.size(); i++) {
+			Colaborador co = colaborador.get(i);
+			
+			System.out.println("COLABORADOR #" + (i+1) + ": " + co.getID());
+			System.out.println("Nome: " + co.getNome());
+			System.out.println("Funcionário desde: " + co.getDataEntrada() + "\n");
+	
+		}
+		
+		for(int i = 0; i < venda.size(); i++) {
+			Venda v = venda.get(i);
+			System.out.println("TESTE: " + v.getCliente());
+		}
+	}
+	
+	private void editar() {
+		System.out.println("O que deseja editar?");
+		System.out.println("1-Bebida");
+		System.out.println("2-Pastel");
+		System.out.println("3-Cardápio");
+		System.out.println("4-Cliente");
+		System.out.println("5-Colaborador");
+		System.out.println("6- Relatório de Venda");
+		
 	}
 }
