@@ -70,9 +70,7 @@ public class Programa {
 		System.out.println("7 - Sair");
 	}*/
 	
-	//Dados pré-cadastrados
-	private void preCadastros(){
-		
+	private void cardapioCadastrado() {
 		for(int i = 0; i < 10; i++) {
 			Cardapio ca = new Cardapio();
 			
@@ -159,6 +157,9 @@ public class Programa {
 			
 			cardapio.add(ca);
 		}
+	}
+	//Dados pré-cadastrados
+	private void preCadastros(){
 		
 		for(int i = 0; i < 10; i++) {
 			
@@ -166,19 +167,14 @@ public class Programa {
 		Pastel p = new Pastel();
 		Cliente cl = new Cliente();
 		Colaborador co = new Colaborador();
-		Venda v = new Venda();
-		RelatorioVenda r = new RelatorioVenda();
-		Cardapio ca = new Cardapio();
 		
 			if(i == 0) {
 				
-				b.setTamanho("350ml");
-				b.setPreco(3.49);
-				b.setEstoque(200);
+				b.setSabor("Coca-cola");
+				b.setEstoque(50);
 				
-				p.setSabor("Queijo com carne");
-				p.setPreco(3.99);
-				p.setEstoque(200);
+				p.setSabor("Queijo");
+				p.setEstoque(50);
 				
 				cl.setCPF("123.456.789-10");
 				cl.setNome("Yudi Playstation");
@@ -186,19 +182,186 @@ public class Programa {
 				cl.setPontuacao(120);
 				
 				co.setNome("Cleiton Rasta");
-				co.setID("0011.2019");
-				co.setDataEntrada("15/12/2019");
+				co.setID("001.2019");
+				co.setDataEntrada("15/8/2019");
 								
-				v.setPastelPedido(p.getSabor());
-				v.setFormaDePagamento("Cartão de débito");
-				v.setQtdPastel(2);
-				v.setQtdBebida(1);
-				v.setValor((b.getPreco() * v.getQtdBebida()) + (p.getPreco() * v.getQtdPastel()));
-				
-				r.setDataVenda("3/5/2021");
-				r.setVenda(v);
 			}
 			
+			if(i == 1) {
+				
+				b.setSabor("Guaraná");
+				b.setEstoque(50);
+				
+				p.setSabor("Carne");
+				p.setEstoque(50);
+				
+				cl.setCPF("555.666.777-88");
+				cl.setNome("Neymar Jr");
+				cl.setTelefone("5555-0000");
+				cl.setPontuacao(150);
+				
+				co.setNome("Fulana Costa");
+				co.setID("0002.2019");
+				co.setDataEntrada("16/8/2021");
+				
+			}
+			
+			if(i == 2) {
+				
+				b.setSabor("Fanta laranja");		
+				b.setEstoque(50);
+				
+				p.setSabor("Carne e queijo");
+				p.setEstoque(50);
+				
+				cl.setCPF("111.222.333-44");
+				cl.setNome("Anônimo da Silva");
+				cl.setTelefone("1234-4321");
+				cl.setPontuacao(80);
+				
+				co.setNome("Patrick Vieira");
+				co.setID("003.2019");
+				co.setDataEntrada("16/8/2019");
+				
+			}
+			
+			if(i == 3) {
+				
+				b.setSabor("Sprite");
+				b.setEstoque(50);
+				
+				p.setSabor("Frango");
+				p.setEstoque(50);
+				
+				cl.setCPF("777.888.999-00");
+				cl.setNome("Alan Silva");
+				cl.setTelefone("0000-0000");
+				cl.setPontuacao(200);
+				
+				co.setNome("Rogerinho do Querô");
+				co.setID("0004.2019");
+				co.setDataEntrada("25/11/2019");
+				
+			}
+			
+			if(i == 4) {
+				
+				b.setSabor("Suco de acerola");
+				b.setEstoque(50);
+				
+				p.setSabor("Frango com queijo");
+				p.setEstoque(50);
+				
+				cl.setCPF("098.765.432-10");
+				cl.setNome("Felipe Smith");
+				cl.setTelefone("9090-1010");
+				cl.setPontuacao(140);
+				
+				co.setNome("Fausto Silva");
+				co.setID("0005.2020");
+				co.setDataEntrada("5/4/2020");
+				
+			}
+			
+			if(i == 5) {
+				
+				b.setSabor("Suco de goiaba");
+				b.setEstoque(50);
+				
+				p.setSabor("Calabresa");
+				p.setEstoque(50);
+				
+				cl.setCPF("123.321.213-00");
+				cl.setNome("Maurício de Sousa");
+				cl.setTelefone("5040-6070");
+				cl.setPontuacao(115);
+				
+				co.setNome("Hiromu Arakawa");
+				co.setID("0006.2020");
+				co.setDataEntrada("5/4/2020");
+				
+			}
+			
+			if(i == 6) {
+				
+				b.setSabor("Suco de laranja");
+				b.setEstoque(50);
+				
+				p.setSabor("Calabresa com queijo");
+				p.setEstoque(50);
+				
+				cl.setCPF("192.837.465-54");
+				cl.setNome("Maria Soares");
+				cl.setTelefone("4545-5454");
+				cl.setPontuacao(15);
+				
+				co.setNome("Alice Nunes");
+				co.setID("0007.2020");
+				co.setDataEntrada("9/6/2020");
+				
+			}
+			
+			if(i == 7) {
+				
+				b.setSabor("Suco de maracujá");
+				b.setEstoque(50);
+				
+				p.setSabor("Pizza (Calabresa,Queijo,Orégano");
+				p.setEstoque(50);
+				
+				cl.setCPF("303.404.505-66");
+				cl.setNome("Fabio Lima");
+				cl.setTelefone("7078-8089");
+				cl.setPontuacao(0);
+				
+				co.setNome("Jeff Bezos");
+				co.setID("0008.2021");
+				co.setDataEntrada("12/1/2021");
+				
+			}
+			
+			if(i == 8) {
+				
+				b.setSabor("Suco de uva");
+				b.setEstoque(50);
+				
+				p.setSabor("Brócolis");
+				p.setEstoque(30);
+				
+				cl.setCPF("222.333.222-33");
+				cl.setNome("Eduardo Suplicy");
+				cl.setTelefone("6655-2020");
+				cl.setPontuacao(1000);
+				
+				co.setNome("Ronaldinho Gaúcho");
+				co.setID("0009.2021");
+				co.setDataEntrada("2/5/2021");
+				
+			}
+			
+			if(i == 9) {
+				
+				b.setSabor("Caldo de Cana");
+				b.setEstoque(70);
+				
+				p.setSabor("Brócolis com queijo");
+				p.setEstoque(30);
+				
+				cl.setCPF("000.000.110-11");
+				cl.setNome("Dwayne Johnson");
+				cl.setTelefone("1333-3331");
+				cl.setPontuacao(75);
+				
+				co.setNome("The Rock");
+				co.setID("0010.2021");
+				co.setDataEntrada("9/9/2021");
+				
+			}
+			
+			bebida.add(b);
+			pastel.add(p);
+			cliente.add(cl);
+			colaborador.add(co);
 		}
 	}
 }
