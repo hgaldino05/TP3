@@ -53,14 +53,6 @@ public class Programa {
 			if(opcao != 0) {
 				
 				exibir();
-				System.out.println("Deseja editar algum dado? (S/N)");
-				String edita = ler.nextLine();
-				
-				if(edita.equalsIgnoreCase("S")) {
-					editar();
-				}else if(edita.equalsIgnoreCase("N")) {
-					executar = false;
-				}
 				executar = false;
 			}
 		}
@@ -85,6 +77,11 @@ public class Programa {
 				ca.setProdutos("Pastel médio");
 				ca.setDescricaoProdutos("Pastel médio, com recheio a escolha");
 				ca.setPrecoProdutos(3.99);
+				
+				ca.setBebidas("Cerveja Latinha 269ml");
+				ca.setDescricaoBebidas("Cerveja em Latinha 269ml");
+				ca.setPrecoBebidas(2.99);
+				
 				ca.setCombos("Pastel em dobro");
 				ca.setDescricaoCombos("Combo com 2 pastéis médios");
 				ca.setPrecoCombos(7.49);
@@ -93,6 +90,11 @@ public class Programa {
 				ca.setProdutos("Pastel Grande");
 				ca.setDescricaoProdutos("Pastel grande, com recheio a escolha");
 				ca.setPrecoProdutos(6.99);
+				
+				ca.setBebidas("Cerveja Lata 350ml");
+				ca.setDescricaoBebidas("Cerveja  em Lata 350ml");
+				ca.setPrecoBebidas(3.99);
+				
 				ca.setCombos("Pastel Grande em dobro");
 				ca.setDescricaoCombos("Combo com 2 pastéis grandes");
 				ca.setPrecoCombos(12.99);
@@ -101,6 +103,11 @@ public class Programa {
 				ca.setProdutos("Mini pastel - 10 unidades");
 				ca.setDescricaoProdutos("Cesto com 10 mini pastéis");
 				ca.setPrecoProdutos(8.99);
+				
+				ca.setBebidas("Cerveja Long Neck 330ml");
+				ca.setDescricaoBebidas("Cerveja em garrafa Long neck 330ml");
+				ca.setPrecoBebidas(3.99);
+				
 				ca.setCombos("Matador de fome");
 				ca.setDescricaoCombos("Combo com 10 mini pastéis + 1 pastel grande");
 				ca.setPrecoCombos(14.99);
@@ -109,6 +116,11 @@ public class Programa {
 				ca.setProdutos("Mini pastel - 5 unidades");
 				ca.setDescricaoProdutos("Cesto com 5 mini pastéis");
 				ca.setPrecoProdutos(4.99);
+				
+				ca.setBebidas("Cerveja Artesanal Garrafa 269ml");
+				ca.setDescricaoBebidas("Cerveja Artesanal em garrafa 269ml");
+				ca.setPrecoBebidas(4.49);
+				
 				ca.setCombos("Média 5");
 				ca.setDescricaoCombos("Combo com 1 pastel médio + 5 mini pastéis");
 				ca.setPrecoCombos(7.99);
@@ -117,6 +129,11 @@ public class Programa {
 				ca.setProdutos("Coxinha");
 				ca.setDescricaoProdutos("Salgado coxinha");
 				ca.setPrecoProdutos(4.99);
+				
+				ca.setBebidas("Cerveja Artesanal Long Neck 350ml");
+				ca.setDescricaoBebidas("Cerveja Artesanal Long Neck 350ml");
+				ca.setPrecoBebidas(5.99);
+				
 				ca.setCombos("Delícia em dobro");
 				ca.setDescricaoCombos("Combo com 1 pastel médio + 1 coxinha");
 				ca.setPrecoCombos(7.99);
@@ -125,38 +142,63 @@ public class Programa {
 				ca.setProdutos("Mini Coxinha - 10 unidades");
 				ca.setDescricaoProdutos("Prato com 10 mini coxinhas");
 				ca.setPrecoProdutos(9.99);
+				
+				ca.setBebidas("Chá Mate Leão 450ml");
+				ca.setDescricaoBebidas("Chá Mate Leão, sabor Limão 450ml");
+				ca.setPrecoBebidas(3.99);
+				
 				ca.setCombos("Família Coxinha");
 				ca.setDescricaoCombos("Combo com 20 mini coxinhas");
 				ca.setPrecoCombos(18.99);
 			}
 			if (i == 6) {
-				ca.setProdutos("Refrigerante Lata 350ml");
-				ca.setDescricaoProdutos("Refrigerante 350ml em Lata");
+				ca.setProdutos("Batata Frita");
+				ca.setDescricaoProdutos("Pote tamanho médio com Batata Frita");
 				ca.setPrecoProdutos(3.99);
+
+				ca.setBebidas("Refrigerante Lata 350ml");
+				ca.setDescricaoBebidas("Refrigerante 350ml em Lata");
+				ca.setPrecoBebidas(3.99);
+				
 				ca.setCombos("Pastel + Refri");
 				ca.setDescricaoCombos("Combo com 1 pastel médio + 1 lata de refri 350ml");
 				ca.setPrecoCombos(6.99);
 			}
 			if (i == 7) {
-				ca.setProdutos("Refrigerante PET 600ml");
-				ca.setDescricaoProdutos("Refrigerante 600ml em garrafa PET");
-				ca.setPrecoProdutos(6.49);
+				ca.setProdutos("Batata Frita Grande");
+				ca.setDescricaoProdutos("Pote tamanho grande com Batata Frita");
+				ca.setPrecoBebidas(7.99);
+				
+				ca.setBebidas("Refrigerante PET 600ml");
+				ca.setDescricaoBebidas("Refrigerante 600ml em garrafa PET");
+				ca.setPrecoBebidas(6.49);
+				
 				ca.setCombos("Matador de Fome 2");
 				ca.setDescricaoCombos("Combo com 1 pastel grande + 1 garrafa de refri 600ml");
 				ca.setPrecoCombos(12.49);
 			}
 			if (i == 8) {
-				ca.setProdutos("Suco Natural 300ml");
-				ca.setDescricaoProdutos("Suco feito da fruta ou da polpa");
-				ca.setPrecoProdutos(4.25);
+				ca.setProdutos("Batata Frita c/ Cheddar e Bacon");
+				ca.setDescricaoProdutos("Pote tamanho médio com Batata Frita c/ Cheddar e Bacon");
+				ca.setPrecoProdutos(5.99);
+				
+				ca.setBebidas("Suco Natural 300ml");
+				ca.setDescricaoBebidas("Suco feito da fruta ou da polpa");
+				ca.setPrecoBebidas(4.25);
+				
 				ca.setCombos("Pastel e suco");
 				ca.setDescricaoCombos("Combo com 1 pastel médio + 1 copo de suco natural 300ml ");
 				ca.setPrecoCombos(12.99);
 			}
 			if (i == 9) {
-				ca.setProdutos("Caldo de cana");
-				ca.setDescricaoProdutos("Copo com Caldo de cana,moído na hora, 400ml");
-				ca.setPrecoProdutos(4.99);
+				ca.setProdutos("Batata Frita c/ Cheddar e Bacon Grande");
+				ca.setDescricaoProdutos("Pote tamanho grande com Batata Frita c/ Cheddar e Bacon");
+				ca.setPrecoProdutos(11.99);
+				
+				ca.setBebidas("Cerveja Latinha 269ml");
+				ca.setDescricaoBebidas("Cerveja Latinha 269ml");
+				ca.setPrecoBebidas(2.99);
+				
 				ca.setCombos("Clássico");
 				ca.setDescricaoCombos("Combo com 1 Pastel médio + 1 copo de caldo de cana");
 				ca.setPrecoCombos(7.99);
@@ -372,44 +414,116 @@ public class Programa {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	private void vendaCadastrada() {
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i < 5; i++) {
 			Venda v = new Venda();
-			Cliente cl = cliente.get(i);
-			Colaborador co = colaborador.get(i);
-			Cardapio ca = cardapio.get(i);
-			
 		
+			Cliente cl1 = cliente.get(0);
+			Cliente cl2 = cliente.get(1);
+			Cliente cl3 = cliente.get(2);
+			Cliente cl4 = cliente.get(3);
+			Cliente cl5 = cliente.get(4);
+			
+			Colaborador co1 = colaborador.get(5);
+			Colaborador co2 = colaborador.get(6);
+			Colaborador co3 = colaborador.get(7);
+			Colaborador co4 = colaborador.get(8);
+			Colaborador co5 = colaborador.get(9);
+			
+			Cardapio ca1 = cardapio.get(0);
+			Cardapio ca2 = cardapio.get(1);
+			Cardapio ca3 = cardapio.get(2);
+			Cardapio ca4 = cardapio.get(3);
+			Cardapio ca5 = cardapio.get(4);
+			Cardapio ca6 = cardapio.get(5);
+			Cardapio ca7 = cardapio.get(6);
+			Cardapio ca8 = cardapio.get(7);
+			Cardapio ca9 = cardapio.get(8);
+			Cardapio ca10 = cardapio.get(9);
 				
 					if(i == 0) {
-						v.setCliente(cl.getNome());
-						v.setVendedor(co.getID());
-						v.setValor(ca.getPrecoProdutos() *v.getQtdPastel());
-						v.setPastelPedido(ca.getProdutos());
-						v.setQtdPastel(2);
+						v.setCliente(cl1.getNome());
+						v.setVendedor(co1.getID());
+						v.setProdutoPedido(ca1.getProdutos());
+						v.setQtdProduto(2);
+						v.setBebidaPedida(ca1.getBebidas());
+						v.setQtdBebida(2);
+						v.setValor((ca1.getPrecoProdutos() *v.getQtdProduto()) +(ca6.getPrecoBebidas() * v.getQtdBebida()));
 						v.setFormaDePagamento("Pagamento via PIX");
 					}
-				
-				
+					if(i == 1) {
+						v.setCliente(cl2.getNome());
+						v.setVendedor(co4.getID());
+						v.setProdutoPedido(ca7.getProdutos());
+						v.setQtdProduto(1);
+						v.setBebidaPedida(null);
+						v.setQtdBebida(0);
+						v.setValor((ca7.getPrecoProdutos() *v.getQtdProduto()) +(ca6.getPrecoBebidas() * v.getQtdBebida()));
+						v.setFormaDePagamento("Dinheiro");
+					}
 					if(i == 2) {
-						v.setCliente(cl.getNome());
-						v.setVendedor(co.getID());
-						v.setValor(ca.getPrecoProdutos() *v.getQtdPastel());
-						v.setPastelPedido(ca.getProdutos());
-						v.setQtdPastel(2);
+						v.setCliente(cl5.getNome());
+						v.setVendedor(co2.getID());
+						v.setProdutoPedido(ca2.getProdutos());
+						v.setQtdProduto(2);
+						v.setBebidaPedida(ca2.getBebidas());
+						v.setQtdBebida(1);
+						v.setValor((ca2.getPrecoProdutos() *v.getQtdProduto()) +(ca2.getPrecoBebidas() * v.getQtdBebida()));
+						v.setFormaDePagamento("Cartão de Débito");
+					}
+					if(i == 3) {
+						v.setCliente(cl3.getNome());
+						v.setVendedor(co3.getID());
+						v.setProdutoPedido(ca3.getProdutos());
+						v.setQtdProduto(3);
+						v.setBebidaPedida(ca3.getBebidas());
+						v.setQtdBebida(3);
+						v.setValor((ca3.getPrecoProdutos() *v.getQtdProduto()) +(ca3.getPrecoBebidas() * v.getQtdBebida()));
+						v.setFormaDePagamento("Cartão de Crédito");
+					}
+					if(i == 4) {
+						v.setCliente(cl4.getNome());
+						v.setVendedor(co5.getID());
+						v.setProdutoPedido(ca6.getProdutos());
+						v.setQtdProduto(2);
+						v.setBebidaPedida(ca6.getBebidas());
+						v.setQtdBebida(1);
+						v.setValor((ca6.getPrecoProdutos() *v.getQtdProduto()) +(ca6.getPrecoBebidas() * v.getQtdBebida()));
 						v.setFormaDePagamento("Pagamento via PIX");
 					}
+				
+				
+					
+					
+					venda.add(v);
 				}
 			}
 
 	
 	private void relatorioCadastrado() {
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i < 5; i++) {
 			RelatorioVenda r = new RelatorioVenda();
+			Venda v = venda.get(i);
 			
-			if(i == 0) {
-				
+			System.out.println("CLIENTE: " + v.getCliente());
+			System.out.println("Vendedor: " + v.getVendedor());
+			System.out.println("Pastel: " + v.getProdutoPedido());
+			if(v.getBebidaPedida() == null) {
+				System.out.println("Bebida: SEM BEBIDA");
+			}else {
+				System.out.println("Bebida: " + v.getBebidaPedida());
 			}
+			
+			if(v.getQtdBebida() == 0) {
+			
+			}else {
+				System.out.println("Quantidade: " + v.getQtdBebida());
+			}
+			System.out.println("Forma de pagamento: " + v.getFormaDePagamento());
+			System.out.println("Valor: " + v.getValor() + "\n");
+			
+			relatorioVenda.add(r);
 		}
 	}
 	
@@ -421,7 +535,7 @@ public class Programa {
 				System.out.println("BEBIDA #" + (i+1) + ": " + b.getSabor());
 			
 				if(b.getSabor().contains("Suco")) {
-					System.out.println("Opções: Copo com 300ml" + b.getSabor());
+					System.out.println("Opções: Copo com 300ml");
 				}else if(b.getSabor().contains("Caldo")) {
 					System.out.println("Opções: Copo com 300ml");
 				}else {
@@ -453,7 +567,8 @@ public class Programa {
 				Cardapio ca = cardapio.get(i);
 				
 				System.out.println("COMBO #" + (i+1) + ": " + ca.getCombos());
-				System.out.println("Preço: " + ca.getPrecoProdutos() + "\n");
+				System.out.println("Preço: " + ca.getPrecoCombos());
+				System.out.println(ca.getDescricaoCombos() + "\n");
 			}
 		
 		System.out.println("Clientes cadastrados no sistema: ");
@@ -477,18 +592,13 @@ public class Programa {
 		
 		for(int i = 0; i < venda.size(); i++) {
 			Venda v = venda.get(i);
-			System.out.println("TESTE: " + v.getCliente());
+			
+			System.out.println("CLIENTE: " + v.getCliente());
+			System.out.println("Vendedor: " + v.getVendedor());
+			System.out.println("Valor: " + v.getValor() + "\n");
 		}
-	}
-	
-	private void editar() {
-		System.out.println("O que deseja editar?");
-		System.out.println("1-Bebida");
-		System.out.println("2-Pastel");
-		System.out.println("3-Cardápio");
-		System.out.println("4-Cliente");
-		System.out.println("5-Colaborador");
-		System.out.println("6- Relatório de Venda");
 		
+		System.out.println("Relatórios de Venda cadastrados no sistema: ");
+		relatorioCadastrado();
 	}
 }

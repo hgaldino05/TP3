@@ -5,9 +5,9 @@ package tp3;
 public class Venda {
 
 	private Double valor;
-	private int qtdPastel;
+	private int qtdProduto;
 	private int qtdBebida;	
-	private String pastelPedido;
+	private String produtoPedido;
 	private String bebidaPedida;
 	private String formaDePagamento;
 	private String cliente;
@@ -21,11 +21,11 @@ public class Venda {
 	public void setValor(Double valor) {
 		this.valor = valor;
 	}
-	public String getPastelPedido() {
-		return pastelPedido;
+	public String getProdutoPedido() {
+		return produtoPedido;
 	}
-	public void setPastelPedido(String pastelPedido) {
-		this.pastelPedido = pastelPedido;
+	public void setProdutoPedido(String produtoPedido) {
+		this.produtoPedido = produtoPedido;
 	}
 	
 	public String getBebidaPedida() {
@@ -41,11 +41,11 @@ public class Venda {
 	public void setFormaDePagamento(String formaDePagamento) {
 		this.formaDePagamento = formaDePagamento;
 	}
-	public int getQtdPastel() {
-		return qtdPastel;
+	public int getQtdProduto() {
+		return qtdProduto;
 	}
-	public void setQtdPastel(int qtdPastel) {
-		this.qtdPastel = qtdPastel;
+	public void setQtdProduto(int qtdProduto) {
+		this.qtdProduto = qtdProduto;
 	}
 	public int getQtdBebida() {
 		return qtdBebida;
