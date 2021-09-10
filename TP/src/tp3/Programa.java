@@ -39,7 +39,7 @@ public class Programa {
 		colaborador = new ArrayList<Colaborador>();
 		relatorioVenda = new ArrayList<RelatorioVenda>();
 		venda = new ArrayList<Venda>();
-		System.out.println("BEM-VINDO AO SISTEMA DA PASTELARIA! \n");
+		System.out.println("BEM-VINDO AO SISTEMA DA PASTELARIA! \n DIGITE UM NÚMERO DIFERENTE DE ZERO PARA MOSTRAR OS DADOS");
 		
 		while(executar) {
 			//opcoes();
@@ -69,6 +69,7 @@ public class Programa {
 		System.out.println("7 - Sair");
 	}*/
 	
+	//Dados do Cardápio
 	private void cardapioCadastrado() {
 		for(int i = 0; i < 10; i++) {
 			Cardapio ca = new Cardapio();
@@ -501,6 +502,7 @@ public class Programa {
 			}
 
 	
+	//Relatório pré-cadastrados
 	private void relatorioCadastrado() {
 		for(int i = 0; i < 5; i++) {
 			RelatorioVenda r = new RelatorioVenda();
@@ -508,7 +510,18 @@ public class Programa {
 			
 			System.out.println("CLIENTE: " + v.getCliente());
 			System.out.println("Vendedor: " + v.getVendedor());
-			System.out.println("Pastel: " + v.getProdutoPedido());
+			if(v.getProdutoPedido() == null) {
+				System.out.println("Produto: SEM BEBIDA");
+			}else {
+				System.out.println("Produto: " + v.getProdutoPedido());
+			}
+			
+			if(v.getQtdProduto() == 0) {
+				
+			}else {
+				System.out.println("Quantidade: " + v.getQtdProduto());
+			}
+			
 			if(v.getBebidaPedida() == null) {
 				System.out.println("Bebida: SEM BEBIDA");
 			}else {
@@ -527,6 +540,7 @@ public class Programa {
 		}
 	}
 	
+	//Exibição dos dados
 	private void exibir() {
 		System.out.println("Bebidas cadastradas no sistema: ");
 			for(int i = 0; i < bebida.size(); i++) {
