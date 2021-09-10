@@ -508,8 +508,29 @@ public class Programa {
 			RelatorioVenda r = new RelatorioVenda();
 			Venda v = venda.get(i);
 			
+			if(i == 0) {
+				r.setDataVenda("10/9/2021");
+			}
+			
+			if(i == 1) {
+				r.setDataVenda("9/9/2021");
+			}
+			
+			if(i == 2) {
+				r.setDataVenda("8/9/2021");
+			}
+			
+			if(i == 3) {
+				r.setDataVenda("10/9/2021");
+			}
+			
+			if(i == 4) {
+				r.setDataVenda("7/9/2021");
+			}
+			
 			System.out.println("CLIENTE: " + v.getCliente());
 			System.out.println("Vendedor: " + v.getVendedor());
+			System.out.println("Data: " + r.getDataVenda());
 			if(v.getProdutoPedido() == null) {
 				System.out.println("Produto: SEM BEBIDA");
 			}else {
@@ -535,6 +556,8 @@ public class Programa {
 			}
 			System.out.println("Forma de pagamento: " + v.getFormaDePagamento());
 			System.out.println("Valor: " + v.getValor() + "\n");
+			
+			
 			
 			relatorioVenda.add(r);
 		}
